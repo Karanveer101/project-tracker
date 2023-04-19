@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Time Tracker</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="formWrapper">
+      <h1>My Project Time Tracker</h1>
+      <form>
+        <div class="form-group">
+          <label for="course">Choose Your Course:</label>
+          <select name="course" id="course">
+            <option value="IDX-5105">IDX-5105</option>
+            <option value="IDX-5106">IDX-5106</option>
+            <option value="HTTP-5113">HTTP-5113</option>
+            <option value="HTTP-5111">HTTP-5111</option>
+            <option value="HTTP-5112">HTTP-5112</option>
+            <option value="HTTP-5114">HTTP-5114</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="name">Project Name:</label>
+          <input type="text" id="name" />
+        </div>
+
+        <div class="form-group">
+          <label for="time">Estimate Time:</label>
+
+          <div class="groupWidth">
+            <input
+              type="number"
+              id="hours"
+              name="hours"
+              placeholder="HH"
+              min="0"
+            />:<input
+              type="number"
+              id="minutes"
+              name="minutes"
+              placeholder="MM"
+              min="0"
+            />
+          </div>
+        </div>
+        <p id="errorMessage"></p>
+        <input type="submit" value="Submit" id="submit" />
+      </form>
+    </div>
+
+    <div id="countdownWrapper">
+      <h1 id="courseName"></h1>
+      <h2 id="projectName"></h2>
+      <p id="timeLeft"></p>
+      <h2 id="timeUp"></h2>
+      <div class="countdownContainer">
+        <div id="progressBar"></div>
+      </div>
+      <div class="buttonWrapper">
+        <button id="startBtn">Start</button>
+        <button id="pauseBtn">Pause</button>
+        <button id="endBtn">End Timer</button>
+      </div>
+    </div>
+
+    <div id="estimateWrapper">
+      <h2>Estimated Time</h2>
+      <p id="estimatedTime"></p>
+      <h2>Actual Time</h2>
+      <p id="actualTime"></p>
+      <h2>Difference</h2>
+      <p id="difference"></p>
+    </div>
+  </body>
+</html>
